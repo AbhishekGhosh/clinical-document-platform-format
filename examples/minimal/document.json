@@ -1,0 +1,33 @@
+{
+  "cdpf_version": "0.1",
+  "document_id": "c2d6832f-013d-45da-9fd5-f7090e346809",
+  "document_type": {
+    "system": "urn:cdpf:document-type",
+    "code": "clinical-note",
+    "display": "Clinical note"
+  },
+  "status": "draft",
+  "created_at": "2026-08-26T09:00:00+05:30",
+  "subject": {
+    "subject_id": "example-patient-001"
+  },
+  "authors": [
+    {
+      "name": "Example Clinician"
+    }
+  ],
+  "blocks": [
+    {
+      "block_id": "557c536a-3911-47ff-bfb4-b7dc676346b0",
+      "block_type": "cdpf.core.chief_complaints",
+      "title": "Chief Complaints",
+      "data": {
+        "items": [
+          {
+            "text": "Fever for two days"
+          }
+        ]
+      }
+    }
+  ]
+}

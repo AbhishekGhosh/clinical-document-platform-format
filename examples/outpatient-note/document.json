@@ -1,0 +1,148 @@
+{
+  "cdpf_version": "0.1",
+  "document_id": "40d1fa5d-a09d-4b02-90e7-839b37f5c49c",
+  "document_type": {
+    "system": "urn:cdpf:document-type",
+    "code": "outpatient-note",
+    "display": "Outpatient note"
+  },
+  "status": "final",
+  "created_at": "2026-08-26T10:15:00+05:30",
+  "subject": {
+    "subject_id": "synthetic-patient-042",
+    "display_name": "Fictional Example",
+    "sex": "female",
+    "birth_date": "1976-03-14"
+  },
+  "encounter": {
+    "encounter_id": "synthetic-encounter-001",
+    "started_at": "2026-08-26T10:00:00+05:30",
+    "location": "Example Clinic"
+  },
+  "authors": [
+    {
+      "author_id": "example-clinician-01",
+      "name": "Example Clinician",
+      "qualifications": [
+        "MBBS"
+      ],
+      "organization": "Example Clinic"
+    }
+  ],
+  "blocks": [
+    {
+      "block_id": "1030577d-dab1-4749-83a0-413a50ead907",
+      "block_type": "cdpf.core.chief_complaints",
+      "title": "Chief Complaints",
+      "data": {
+        "items": [
+          {
+            "text": "Headache",
+            "onset": "3 days"
+          },
+          {
+            "text": "Mild nausea",
+            "onset": "1 day"
+          }
+        ]
+      }
+    },
+    {
+      "block_id": "58f2e706-3476-401f-a258-a9ec25621343",
+      "block_type": "cdpf.core.history",
+      "title": "History",
+      "data": {
+        "text": "Synthetic example only. No real patient information is represented."
+      }
+    },
+    {
+      "block_id": "702b9434-20b8-40e0-bd95-dc531ad21728",
+      "block_type": "cdpf.core.examination.general",
+      "title": "General Examination",
+      "data": {
+        "findings": [
+          {
+            "label": "Pallor",
+            "status": "absent"
+          },
+          {
+            "label": "Pulse",
+            "status": "present",
+            "value": 78,
+            "unit": "/min"
+          },
+          {
+            "label": "Blood pressure",
+            "status": "present",
+            "value": "132/82",
+            "unit": "mmHg"
+          }
+        ]
+      }
+    },
+    {
+      "block_id": "4aabf058-4c94-401b-bb41-d4454131738c",
+      "block_type": "cdpf.core.investigations",
+      "title": "Investigations",
+      "data": {
+        "items": [
+          {
+            "text": "Example laboratory summary attached",
+            "attachment": {
+              "attachment_id": "7fd3fb50-b264-4e54-89ac-3cc8f3219c77"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block_id": "ba8d15fb-43f0-453c-97f7-d811384bc2fa",
+      "block_type": "cdpf.core.diagnosis",
+      "title": "Diagnosis",
+      "data": {
+        "items": [
+          {
+            "text": "Example tension-type headache"
+          }
+        ]
+      }
+    },
+    {
+      "block_id": "61a7ccca-1649-4e49-ae0d-04541352ae85",
+      "block_type": "cdpf.core.medications",
+      "title": "Medications",
+      "data": {
+        "items": [
+          {
+            "medication": {
+              "display": "Paracetamol 500 mg tablet",
+              "generic_name": "Paracetamol",
+              "strength": "500 mg",
+              "dose_form": "Tablet"
+            },
+            "dose": "1 tablet",
+            "frequency": "as required",
+            "duration": "3 days",
+            "instructions": "Synthetic example — not medical advice",
+            "status": "prescribed"
+          }
+        ]
+      }
+    },
+    {
+      "block_id": "52b5b747-6b1c-451a-b63f-c17aa93e9fed",
+      "block_type": "cdpf.core.advice",
+      "title": "Advice",
+      "data": {
+        "items": [
+          {
+            "text": "Return for review if symptoms persist. Synthetic example only."
+          }
+        ]
+      }
+    }
+  ],
+  "presentation": {
+    "layout_profile": "org.example.a4-note-v1"
+  }
+}

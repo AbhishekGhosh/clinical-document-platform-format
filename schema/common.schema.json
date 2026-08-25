@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cdpf:schema:0.1:common",
+  "title": "CDPF Draft 0.1 common types",
+  "$defs": {
+    "coding": {
+      "type": "object",
+      "required": [
+        "code"
+      ],
+      "properties": {
+        "system": {
+          "type": "string",
+          "minLength": 1
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "display": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "identifier": {
+      "type": "object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "system": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string"
+        },
+        "use": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "quantity": {
+      "type": "object",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "system": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "comparator": {
+          "enum": [
+            "<",
+            "<=",
+            ">=",
+            ">"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "code": {
+          "$ref": "#/$defs/coding"
+        },
+        "status": {
+          "enum": [
+            "normal",
+            "abnormal",
+            "present",
+            "absent",
+            "not_assessed",
+            "indeterminate"
+          ]
+        },
+        "value": {},
+        "unit": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "extensions": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "attachment_reference": {
+      "type": "object",
+      "required": [
+        "attachment_id"
+      ],
+      "properties": {
+        "attachment_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "extensions": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": true
+    }
+  }
+}

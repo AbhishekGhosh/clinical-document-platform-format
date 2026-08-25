@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cdpf:schema:0.1:block:medications",
+  "title": "CDPF Draft 0.1 medication block data",
+  "type": "object",
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "medication"
+        ],
+        "properties": {
+          "medication": {
+            "type": "object",
+            "required": [
+              "display"
+            ],
+            "properties": {
+              "display": {
+                "type": "string",
+                "minLength": 1
+              },
+              "generic_name": {
+                "type": "string"
+              },
+              "brand_name": {
+                "type": "string"
+              },
+              "strength": {
+                "type": "string"
+              },
+              "dose_form": {
+                "type": "string"
+              },
+              "route": {
+                "type": "string"
+              },
+              "codes": {
+                "type": "array",
+                "items": {
+                  "$ref": "urn:cdpf:schema:0.1:common#/$defs/coding"
+                }
+              },
+              "extensions": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          "dose": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string"
+          },
+          "timing": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "prescribed",
+              "current",
+              "completed",
+              "stopped",
+              "cancelled"
+            ]
+          },
+          "extensions": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,3 @@
+Synthetic attachment for CDPF Draft 0.1 example.
+No real patient data.
+Example values: Hb 12.8 g/dL; creatinine 0.9 mg/dL.
